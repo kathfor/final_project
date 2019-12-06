@@ -43,8 +43,8 @@ def min_max_temp(query):
     return "Successfully entered " + str(datetime) + str(temp) + str(max_temp) + str(min_temp) + " into database"
 
 #uncomment lines below to collect weather data
-# print(weather_conditions('Ann+Arbor'))
-# print(min_max_temp('Ann+Arbor'))
+print(weather_conditions('Ann+Arbor'))
+print(min_max_temp('Ann+Arbor'))
 
 #Traffic API
 # http(s)://baseURL/traffic/services/versionNumber/flowSegmentData/style/zoom/format?key=Your_API_Key&point=point&unit=unit&thickness=thickness&openLr=boolean&jsonp=jsonp
@@ -106,5 +106,5 @@ def report_confidence(coord_lst):
     return None
 
 #uncomment to collect traffic data
-# print(traffic_Data(coordinates))
-# print(report_confidence(coordinates))
+print(traffic_Data(coordinates))
+print(report_confidence(coordinates))
