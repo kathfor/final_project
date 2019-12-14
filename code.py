@@ -443,7 +443,7 @@ def visualize_data():
     cloud_percent = cloud_count/total
     labels = ['Snow', 'Rain', 'Clouds']
     values = [snow_percent, rain_percent, cloud_percent]
-    colors = ['red', 'green', 'yellow']
+    colors = ['#8C92AC', '#71A6D2', '#D3D3D3']
     fig, ax = plt.subplots()
     ax.pie(values, labels=labels, colors=colors, autopct='%1.1f%%')
     ax.axis('equal')
@@ -487,8 +487,8 @@ def visualize_data():
     ax2.grid()
     ax1.set_ylabel('Temperature')
     ax2.set_ylabel('Confidence')
-    ax1.set_xticklabels((' ', '12-04-2019', '12-05-2019', '12-06-2019', '12-07-2019', '12-08-2019', '12-09-2019', '12-10-2019', '12-11-2019'))
-    ax2.set_xticklabels((' ', '12-04-2019', '12-05-2019', '12-06-2019', '12-07-2019', '12-08-2019', '12-09-2019', '12-10-2019', '12-11-2019'))
+    ax1.set_xticklabels((' ', '12-04', '12-05', '12-06', '12-07', '12-08', '12-09', '12-10', '12-11'))
+    ax2.set_xticklabels((' ', '12-04', '12-05', '12-06', '12-07', '12-08', '12-09', '12-10', '12-11'))
     ax1.set_title('Average Temperature vs. Average Confidence in Traffic Predictions per day (12/4/19 - 12/11/19)')
     plt.xlabel('Day')
     fig.savefig('line.png')
@@ -523,10 +523,10 @@ def visualize_data():
     fig, ax = plt.subplots()
     dates = list(dates)
     ax.plot(dates, temp_list, label='Temperature')
-    ax.plot(dates, speed_list, color='r', label='Speed')
+    ax.plot(dates, speed_list, color='green', label='Speed')
     ax.legend()
     ax.grid()
-    ax.set_xticklabels((' ', '12-04-2019', '12-05-2019', '12-06-2019', '12-07-2019', '12-08-2019', '12-09-2019', '12-10-2019', '12-11-2019'))
+    ax.set_xticklabels((' ', '12-04', '12-05', '12-06', '12-07', '12-08', '12-09', '12-10', '12-11'))
     ax.set_title('Average Temperature vs. Average Speed per day (12/4/19 - 12/11/19)')
     plt.xlabel('Day')
     fig.savefig('doubleline.png')
@@ -554,7 +554,7 @@ def visualize_data():
     weather_conditions = graph_data.keys()
     confidence_vals = graph_data.values()
     fig, ax = plt.subplots()
-    ax.bar(weather_conditions, confidence_vals, color=['red', 'green', 'blue'])
+    ax.bar(weather_conditions, confidence_vals, color=['#D3D3D3', '#71A6D2', '#8C92AC'])
     ax.set_xticklabels(('Clouds', 'Rain', 'Snow'))
     ax.set_ylabel('Confidence')
     ax.set_yticks([.90, .905, .91, .915, .92, .925, .93, .935])
