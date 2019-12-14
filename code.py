@@ -443,7 +443,7 @@ def visualize_data():
     cloud_percent = cloud_count/total
     labels = ['Snow', 'Rain', 'Clouds']
     values = [snow_percent, rain_percent, cloud_percent]
-    colors = ['red', 'green', 'blue']
+    colors = ['red', 'green', 'yellow']
     fig, ax = plt.subplots()
     ax.pie(values, labels=labels, colors=colors, autopct='%1.1f%%')
     ax.axis('equal')
