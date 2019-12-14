@@ -410,7 +410,9 @@ def write_data(filename):
     with open(filename, mode='w') as write_file:
         write_file.write('(query, datetime, avg_temp, avg_speed, confidence, weather)')
         for row in data:
+            write_file.write('\n')
             write_file.write(str(row))
+            
 
 #uncomment to write data to text file
 write_data('data.txt')
