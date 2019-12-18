@@ -565,4 +565,4 @@ def visualize_data():
     plt.show()
 
 #uncomment to create data visualizations 
-print(visualize_data())
+# print(visualize_data())
