@@ -415,7 +415,7 @@ def write_data(filename):
             
 
 #uncomment to write data to text file
-write_data('data.txt')
+# write_data('data.txt')
 
 def visualize_data():
     '''Input: None
